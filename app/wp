@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+WP_CLI_OPT=""
+if [[ -n "$WP_PATH" ]]; then
+  WP_CLI_OPT="--path=$WP_PATH"
+fi
+
+/usr/local/bin/php /usr/local/bin/wp-cli.phar $WP_CLI_OPT $@
